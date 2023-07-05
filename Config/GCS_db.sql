@@ -24,6 +24,9 @@ CREATE TABLE IF NOT EXISTS `gcs_admin_authority` (
   `admin_authority_id` int NOT NULL AUTO_INCREMENT,
   `admin_id` int NOT NULL,
   `authority_id` int NOT NULL,
+  `字段 4` varchar(50) DEFAULT NULL,
+  `字段 5` varchar(50) DEFAULT NULL,
+  `字段 6` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`admin_authority_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -39,6 +42,9 @@ CREATE TABLE IF NOT EXISTS `gcs_admin_info` (
   `admin_create_datetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `admin_status` tinyint NOT NULL DEFAULT '1',
   `admin_delete_timestamp` datetime DEFAULT NULL,
+  `字段 9` varchar(50) DEFAULT NULL,
+  `字段 10` varchar(50) DEFAULT NULL,
+  `字段 11` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`admin_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -51,6 +57,9 @@ CREATE TABLE IF NOT EXISTS `gcs_ans_record` (
   `answer_time` int NOT NULL,
   `answer_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `accuracy` int NOT NULL,
+  `字段 6` varchar(50) DEFAULT NULL,
+  `字段 7` varchar(50) DEFAULT NULL,
+  `字段 8` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`answer_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -61,6 +70,9 @@ CREATE TABLE IF NOT EXISTS `gcs_authority_info` (
   `authority_id` int NOT NULL AUTO_INCREMENT,
   `authority_name` varchar(50) NOT NULL,
   `authority_info` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT '',
+  `字段 4` varchar(50) DEFAULT NULL,
+  `字段 5` varchar(50) DEFAULT NULL,
+  `字段 6` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`authority_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -75,6 +87,9 @@ CREATE TABLE IF NOT EXISTS `gcs_exchange_record` (
   `receive_location` varchar(50) NOT NULL,
   `receive_phonenumber` varchar(50) NOT NULL,
   `receive_name` varchar(50) NOT NULL,
+  `字段 8` varchar(50) DEFAULT NULL,
+  `字段 9` varchar(50) DEFAULT NULL,
+  `字段 10` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`exchange_record_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -85,6 +100,9 @@ CREATE TABLE IF NOT EXISTS `gcs_garbage_info` (
   `garbage_id` int NOT NULL AUTO_INCREMENT,
   `garbage_name` varchar(50) NOT NULL,
   `garbage_classification` enum('可回收垃圾','其他垃圾','有害垃圾','厨余垃圾') NOT NULL,
+  `字段 4` varchar(50) DEFAULT NULL,
+  `字段 5` varchar(50) DEFAULT NULL,
+  `字段 6` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`garbage_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -100,6 +118,9 @@ CREATE TABLE IF NOT EXISTS `gcs_goods_info` (
   `goods_create_datetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `goods_status` int NOT NULL DEFAULT '1',
   `goods_delete_datetime` int DEFAULT NULL,
+  `字段 9` varchar(50) DEFAULT NULL,
+  `字段 10` varchar(50) DEFAULT NULL,
+  `字段 11` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`goods_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -115,6 +136,9 @@ CREATE TABLE IF NOT EXISTS `gcs_news_comment` (
   `comment_datetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `comment_status` tinyint NOT NULL DEFAULT '1',
   `comment_delete_datetime` datetime DEFAULT NULL,
+  `字段 9` varchar(50) DEFAULT NULL,
+  `字段 10` varchar(50) DEFAULT NULL,
+  `字段 11` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`comment_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -131,6 +155,9 @@ CREATE TABLE IF NOT EXISTS `gcs_news_info` (
   `news_create_datetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `news_statues` tinyint NOT NULL DEFAULT '1',
   `news_delete_datetime` tinyint DEFAULT NULL,
+  `字段 10` varchar(50) DEFAULT NULL,
+  `字段 11` varchar(50) DEFAULT NULL,
+  `字段 12` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`news_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -145,6 +172,9 @@ CREATE TABLE IF NOT EXISTS `gcs_quiz_info` (
   `quiz_datetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `quiz_status` tinyint NOT NULL DEFAULT '1',
   `quiz_delete_datetime` datetime DEFAULT NULL,
+  `字段 8` varchar(50) DEFAULT NULL,
+  `字段 9` varchar(50) DEFAULT NULL,
+  `字段 10` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`quiz_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -160,6 +190,9 @@ CREATE TABLE IF NOT EXISTS `gcs_user_info` (
   `user_comment_num` int NOT NULL DEFAULT '0',
   `user_like_num` int NOT NULL DEFAULT '0',
   `user_register_datetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `字段 9` varchar(50) DEFAULT NULL,
+  `字段 10` varchar(50) DEFAULT NULL,
+  `字段 11` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -173,6 +206,9 @@ CREATE TABLE IF NOT EXISTS `gcs_user_search_info` (
   `user_id` int NOT NULL,
   `garbage_id` int NOT NULL,
   `user_register_datetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `字段 7` varchar(50) DEFAULT NULL,
+  `字段 8` varchar(50) DEFAULT NULL,
+  `字段 9` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`search_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
